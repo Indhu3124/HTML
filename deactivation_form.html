@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Deactivation form</title>
+    <style>
+        body {
+            background-color: rgb(127, 160, 214);
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        label {
+            color: white;
+            font-style: italic;
+            font-size: 20px;
+            display: block;
+            margin-top: 15px;
+        }
+        input, select {
+            margin-top: 5px;
+            padding: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="submit"] {
+            background-color: white;
+            color: rgb(97, 150, 229);
+            border-radius: 8px;
+            padding: 8px 15px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        h2 {
+            color: black;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <form action="/deactivation" method="post">
+        <h2>DELETE ACCOUNT</h2>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname">
+
+        <label for="facebookusername">Facebook Username:</label>
+        <input type="text" id="facebookusername" name="facebookusername">
+
+        <label for="registeredemail">Registered Email/Phone no.:</label>
+        <input type="text" id="registeredemail" name="registeredemail">
+
+        <label for="time_period">Deactivation:</label>
+        <select id="time_period" name="time_period">
+            <option value="Temporary">Temporary - 3 Months</option>
+            <option value="Permanent">Permanent</option>
+        </select>
+
+        <label for="reasons">Reason for Deactivation:</label>
+        <select id="reasons" name="reasons">
+            <option value="Privacy concerns">Privacy concerns</option>
+            <option value="Too much time">Spending too much time on the app</option>
+            <option value="Too many notifications">Too many notifications</option>
+            <option value="Switching">Switching to another platform</option>
+            <option value="Not useful">Not finding it useful anymore</option>
+            <option value="Personal">Personal reasons</option>
+            <option value="Other">Others</option>
+        </select>
+<br><br>
+        <input type="submit" value="Submit">
+        <br>
+    </form>
+</body>
+</html>
