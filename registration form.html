@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: rgb(137, 86, 107);
+            font-family: Arial, sans-serif;
+        }
+        h1{
+            color:rgb(255, 255, 255);
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            
+        }
+        form {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-color: black;
+        }
+        label {
+            color: rgb(141, 17, 69);
+            font-style: italic;
+            font-size: large;
+        }
+        h2 {
+            font-style: italic;
+            color: azure;
+            background-color:  rgb(141, 17, 69);
+            text-align: center;
+            padding: 5px;
+        }
+        input[type="submit"], input[type="reset"] {
+            color: white;
+            background-color: rgb(141, 17, 69);
+            border-radius: 30px;
+            border: none;
+            padding: 8px 15px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        select,
+        textarea {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 5px;
+        }
+
+       
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        
+        label.inline {
+            margin-right: 20px;
+            font-style: normal;
+            font-size: medium;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>COURSE REGISTRATION FORM</h1>
+
+    <form>
+        <h2>STUDENT REGISTRATION FORM</h2>
+
+        <label for="fn">First Name:</label>
+        <input type="text" id="fn" name="fn">
+
+        <label for="ln">Last Name:</label>
+        <input type="text" id="ln" name="ln">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+         
+        <label>Gender:</label><br>
+        <label class="inline"><input type="radio" name="gender" value="Male"> Male</label><br>
+        <label class="inline"><input type="radio" name="gender" value="Female"> Female</label><br>
+        <label class="inline"><input type="radio" name="gender" value="Other"> Other</label><br>
+
+        <h2>CONTACT INFORMATION</h2>
+
+        <label for="college_email">College Email:</label>
+        <input type="email" id="college_email" name="college_email">
+
+        <label for="personal_email">Personal Email:</label>
+        <input type="email" id="personal_email" name="personal_email">
+
+        <label for="number">Contact Number:</label>
+        <input type="number" id="number" name="number">
+
+        <label for="alt_number">Alternate Number:</label>
+        <input type="number" id="alt_number" name="alt_number">
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3"></textarea>
+
+        <h2>PREVIOUS SEMESTER DETAILS</h2>
+
+        <label for="roll_number">Roll Number:</label>
+        <input type="text" id="roll_number" name="roll_number">
+
+        <label for="department">Department:</label>
+        <select id="department" name="department">
+            <option value="DS">DS</option>
+            <option value="IT">IT</option>
+            <option value="CSE">CSE</option>
+            <option value="AIML">AIML</option>
+            <option value="EXE">EXE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+        </select>
+
+        <label for="yr">Year:</label>
+        <select id="yr" name="yr">
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select>
+
+        <label for="percentage">Previous Semester Percentage:</label>
+        <input type="text" id="percentage" name="percentage">
+
+        <h2>COURSES FOR THIS SEMESTER</h2>
+
+        <label class="inline"><input type="checkbox" name="course" value="DSA"> Data Structures & Algorithms</label><br>
+        <label class="inline"><input type="checkbox" name="course" value="Python"> Python Programming</label><br>
+        <label class="inline"><input type="checkbox" name="course" value="DBMS"> Database Management Systems</label><br>
+        <label class="inline"><input type="checkbox" name="course" value="IoT"> Internet of Things</label><br>
+        <label class="inline"><input type="checkbox" name="course" value="NMPS"> Numerical Methods & Probability Statistics</label><br>
+        <label class="inline"><input type="checkbox" name="course" value="GraphicDesign"> Graphic Designing</label><br>
+
+        <h2>PARENT DETAILS</h2>
+
+        <label for="fathername">Father's Name:</label>
+        <input type="text" id="fathername" name="fathername">
+
+        <label for="mothername">Mother's Name:</label>
+        <input type="text" id="mothername" name="mothername">
+
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" name="occupation">
+
+        <label for="parentnumber">Parent's Contact Number:</label>
+        <input type="tel" id="parentnumber" name="parentnumber">
+
+        <label for="parentemail">Parent's Email:</label>
+        <input type="email" id="parentemail" name="parentemail">
+
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
