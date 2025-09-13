@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>COURSERA Feedback Form</title>
+    <style>
+        body {
+            background-color: #e3f2fd;
+            font-family: Georgia, serif;
+        }
+        h2 {
+            text-align: center;
+            color: #0d47a1;
+            font-style: italic;
+        }
+        form {
+            background: #ffffff;
+            width: 450px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 12px;
+            
+        }
+        label {
+            
+            margin-top: 12px;
+            color: #1565c0;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            border: 1px solid #64b5f6;
+            border-radius: 6px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 6px;
+        }
+        input[type="submit"] {
+            background: #1565c0;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>COURSERA App Feedback</h2>
+
+    <form>
+        <label>Your Name</label>
+        <input type="text"><br><br>
+
+        <label>Email</label>
+        <input type="email"><br><br>
+
+        <label>How would you rate Coursera?</label><br><br>
+        <input type="radio" name="rating"> Excellent
+        <input type="radio" name="rating"> Good
+        <input type="radio" name="rating"> Average
+        <input type="radio" name="rating"> Poor
+<br><br>
+        <label>What features did you like in SmartNotes?</label><br><br>
+        <input type="checkbox"> Easy to Use
+        <input type="checkbox"> Discussion Forums
+        <input type="checkbox"> Information<br>
+        <input type="checkbox"> Support<br><br>
+
+        <label>Any Suggestions for SmartNotes?</label>
+        <textarea rows="4" placeholder="Write here..."></textarea>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+
+</body>
+</html>
