@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Events & Methods </title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: rgb(133, 231, 231);
+    
+  }
+  h2 {
+    color:rgb(27, 103, 128);
+  }
+  section {
+    background:white;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  button, input {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  h1{
+    color:rgb(3, 124, 124) ;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>Java Script Events & Methods </h1>
+
+
+<section>
+  <h2>Click Event</h2>
+  <button onclick="changeBackground()">Click Me to Change Background!</button>
+</section>
+
+<section>
+  <h2>Double Click Event</h2>
+  <p id="dblText" ondblclick="makeUppercase()">Double click me to change to UPPERCASE.</p>
+</section>
+
+<section>
+  <h2>Keyboard Event</h2>
+  <input type="text" placeholder="Type something" onkeydown="showKey(event)">
+  <p>Key Pressed: <span id="keyOutput"></span></p>
+</section>
+
+
+<section>
+  <h2>Array Method (map)</h2>
+  <button onclick="arrayMapDemo()">Show Squares of Numbers [1,2,3,4,5]</button>
+  <p id="arrayOutput"></p>
+</section>
+
+<section>
+  <h2>String Method</h2>
+  <input type="text" placeholder="Type text" oninput="stringMethodsDemo(this.value)">
+  <p id="stringOutput"></p>
+</section>
+
+<section>
+  <h2>Math Method</h2>
+  <button onclick="showRandom()">Generate Random Number (0-100)</button>
+  <p id="mathOutput"></p>
+</section>
+
+<script>
+  
+  function changeBackground() {
+    const colors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff'];
+    document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+  }
+
+  
+  function makeUppercase() {
+    const p = document.getElementById('dblText');
+    p.innerText = p.innerText.toUpperCase();
+  }
+
+  
+  function showKey(event) {
+    document.getElementById('keyOutput').innerText = event.key;
+  }
+
+  
+  function arrayMapDemo() {
+    const numbers = [1,2,3,4,5];
+    const squares = numbers.map(num => num * num);
+    document.getElementById('arrayOutput').innerText = squares.join(', ');
+  }
+
+  function stringMethodsDemo(str) {
+    const result = `Length: ${str.length}, Uppercase: ${str.toUpperCase()}`;
+    document.getElementById('stringOutput').innerText = result;
+  }
+
+ 
+  function showRandom() {
+    document.getElementById('mathOutput').innerText = Math.floor(Math.random() * 101);
+  }
+</script>
+
+</body>
+</html>
